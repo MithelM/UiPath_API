@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,1969" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="962,1969" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -105,7 +105,7 @@
         <OutArgument x:TypeArguments="x:String">[var_strPath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\\Users\\mithel.medeiros\\OneDrive - T2C CONSULTORIA LTDA\\Documentos\\Imagens_do_Dia</InArgument>
+        <InArgument x:TypeArguments="x:String">["Imagens_do_Dia"]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:CommentOut DisplayName=" Select Path Manual" sap:VirtualizedContainerService.HintSize="579,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
@@ -131,7 +131,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="579,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Caminho da Pasta: &quot; + var_strPath]" />
-    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="https://api.nasa.gov/planetary/apod?api_key=wm8tkawrmly9FcG4kAwQWPvOASvSKvadqCvx9fGO" sap:VirtualizedContainerService.HintSize="579,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" ResourcePath="C:\Users\mithel.medeiros\Documents\Sem título.txt" ResponseHeaders="[var_dictJSON]" Result="[var_strResultRequest]" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="https://api.nasa.gov/planetary/apod?api_key=wm8tkawrmly9FcG4kAwQWPvOASvSKvadqCvx9fGO" sap:VirtualizedContainerService.HintSize="579,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" ResourcePath="C:\Users\mithel.medeiros\Documents\Sem título.txt" ResponseHeaders="[var_dictJSON]" Result="[var_strResultRequest]" TimeoutMS="60000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -152,7 +152,7 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="579,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Quantidade de Requisições restantes: &quot; + var_dictJSON(&quot;X-RateLimit-Remaining&quot;)]" />
     <ui:CommentOut DisplayName="Usando 'Matches' Para Formatar o Titulo da Imagem" sap:VirtualizedContainerService.HintSize="579,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="646,875" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="646,835" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
